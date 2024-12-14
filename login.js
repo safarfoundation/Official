@@ -265,6 +265,6 @@ function hideErrorPopup() {
 
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('currentUser')) {
-        window.location.href = 'spin.html';
+        window.location.href = 'login.html';
     }
 });
