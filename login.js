@@ -231,20 +231,6 @@ function register() {
         }, 4000) // Hide the pop-up after 2s
     }
 
-    // function showBlankFieldPopup() {
-    //     const blankFieldPopup = document.getElementById('blank-field-popup');
-
-    //     blankFieldPopup.classList.remove('hidden');
-    //     setTimeout(() => {
-    //         hideBlankFieldPopup();
-    //     }, 2000); // Hide the pop-up after 2 second
-    // }
-
-    // function hideBlankFieldPopup() {
-    //     const blankFieldPopup = document.getElementById('blank-field-popup');
-    //     blankFieldPopup.classList.add('hidden');
-    // }
-
 function login() {
     const username = document.getElementById('login-username').value;
     const password = document.getElementById('login-password').value;
@@ -257,7 +243,7 @@ function login() {
     const users = JSON.parse(localStorage.getItem('users')) || {};
     if (users[username] && users[username].password === password) {
         localStorage.setItem('currentUser', username);
-        window.location.href = 'index.html';
+        window.location.href = 'spin.html';
     } else {
         showErrorPopup();
     }
@@ -279,6 +265,6 @@ function hideErrorPopup() {
 
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('currentUser')) {
-        window.location.href = 'index.html';
+        window.location.href = 'spin.html';
     }
 });
