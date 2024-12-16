@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  </head>
+   <body>
+<h2 class="sectionTitle">About Us</h2>
+            <div class="Active-members">
+                <ul>
+                    <li>
+                        <a href="#aboutSection" onclick="showDetails('president')">President:</a>
+                        <p>Oversees the foundation's operations and strategic planning.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="#aboutSection" onclick="showDetails('vice-president')">Vice President:</a>
+                        <p>Supports the President and manages specific projects or departments.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="#">Fund Collection</a>
+                        <p>Manages the foundation's finances, including budgeting and fundraising.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="#">Secretary:</a>
+                        <p>Handles administrative tasks, meeting minutes, and communication.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="#">Member Coordinator:</a>
+                        <p>Manages and recruits volunteers, ensuring they are effectively utilized.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="#">Fundraising Manager:</a>
+                        <p>Develops and implements fundraising strategies and campaigns.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="#">Public Relations Officer:</a>
+                        <p>Manages the foundation's public image and relationships with media.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="#">Program Manager:</a>
+                        <p>Oversees specific programs or projects within the foundation.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="#">Community Outreach Coordinator:</a>
+                        <p>Engages with the community and builds partnerships.</p>
+                    </li>
+                </ul>
+                <div id="president" class="member-details">
+                    <div class="member-details-content">
+                        <span class="close" onclick="closeDetails()">&times;</span>
+                    <h2>President</h2>
+                    <p>Name: Samim Laskar</p>
+                    <p>Phone: (+91) 9062 8867 83</p>
+                    <p>Blood Group: A+</p>
+                    <P>Address: Ghuni Laskar Para</P>
+                    <p>Score: 217</p>
+                    </div>
+                </div>
+                <div id="vice-president" class="member-details">
+                    <div class="member-details-content">
+                        <span class="close" onclick="closeDetails()">&times;</span>
+                    <h2>Vice President</h2>
+                    <p>Name: Rohan Ali Laskar</p>
+                    <p>Phone: (+91) 9330 2698 17</p>
+                    <p>Blood Group: B+</p>
+                    <P>Address: Ghuni Laskar Para</P>
+                    <p>Score: 208</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+    </body>
+
+<styling>
+/* AboutSection Start */
+
+#aboutSection .container ul {
+    padding: 10px;
+    line-height: 10px;
+}
+
+#aboutSection .container a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#aboutSection .container ul a:hover {
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.member-details {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.member-details-content {
+    background-color: #efefef;
+    margin: 30% 15% 15% 9%; /* Center the Details */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#aboutSection .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+    height: 245px;
+}
+</styling>
+
+</footer>
+        <script src="script.js"></script>
+    </body>
