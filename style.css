@@ -162,6 +162,89 @@ header nav ul li a:hover {
 
 /* AboutSection Start */
 
+#aboutSection .container ul {
+    padding: 10px;
+    line-height: 10px;
+}
+
+#aboutSection .container a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#aboutSection .container ul a:hover {
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.member-details {
+    text-align: center;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.member-details-content {
+    border-radius: 5PX;
+    background-color: #efefef;
+    margin: 30% 15% 15% 9%; /* Center the Details */
+    padding: 20px;
+    border: 5px solid #4B91F7;
+    border-radius: 10px;
+    width: 80%; /* Could be more or less, depending screen size */
+}
+
+.member-details .member-details-content img {
+    width: 100px;
+    height: 130px;
+    border: 2px solid #4B91F7;
+    border-radius: 4px;
+    padding: 2px;
+    padding-bottom: 0;
+}
+
+.member-details .member-details-content .detailss p {
+    line-height: 50px;
+    margin-bottom: -16px;
+    font-size: 13px;
+}
+
+.member-details .member-details-content p span {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.close {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:0 0 0 220px;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.close:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
 #aboutSection .cards {
     display: flex;
     flex-wrap: wrap;
@@ -512,6 +595,12 @@ footer .newsLetterContainer input {
 /* Footer End here */
 
 /* Responsive Code Start from Here */
+@media screen and (max-width: 1400px) {
+    .member-details-content {
+        width: 25%; /* Could be more or less, depending screen size */
+    }
+}
+
 @media screen and (max-width: 1140px) {
     .container {
         width: 100%;
@@ -519,6 +608,9 @@ footer .newsLetterContainer input {
     }
     .education .videoPlayer {
         width: 1280px;
+    }
+    .member-details-content {
+        width: 30%; /* Could be more or less, depending screen size */
     }
 }
 
@@ -533,6 +625,9 @@ footer .newsLetterContainer input {
     #aboutSection .cards > div {
         margin: 10px 0;
     }
+    .member-details-content {
+        width: 33%; /* Could be more or less, depending screen size */
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -545,9 +640,15 @@ footer .newsLetterContainer input {
     .programs .boxContainer {
         grid-template-columns: repeat(2, 1fr);
     }
+    .member-details-content {
+        width: 33%; /* Could be more or less, depending screen size */
+    }
 }
 
 @media screen and (max-width: 768px) {
+    .member-details-content {
+        width: 44%; /* Could be more or less, depending screen size */
+    }
     header nav {
         position: relative;
         border: 2px solid #fff;
@@ -617,6 +718,9 @@ footer .newsLetterContainer input {
 }
 
 @media screen and (max-width: 425px) {
+    .member-details-content {
+        width: 78%; /* Could be more or less, depending screen size */
+    }
     .banner h1 {
         margin-top: 150px;
         font-size: 2rem;
@@ -657,6 +761,20 @@ footer .newsLetterContainer input {
     }
     .banner h1 {
         margin-top: 100px;
+    }
+    .member-details-content {
+        padding: 10px;
+        width: 82%; /* Could be more or less, depending screen size */
+    }
+    .close {
+        margin: 0 0 0 177px;
+    }
+    .member-details .member-details-content .detailss p {
+        line-height: 50px;
+        margin-bottom: -16px;
+    }
+    p {
+        font-size: 12px;
     }
 }
 
