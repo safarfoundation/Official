@@ -3,89 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Register</title>
-    <link rel="stylesheet" href="login.css">
+    <title>SAFAR FOUNDATION</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <div id="login-form" class="form">
-            <h2>Login</h2>
-            <input type="text" id="login-username" placeholder="Active Member's ID:" required>
-            <div class="password-container">
-                <input class="input-password" type="password" id="login-password" placeholder="Password" required>
-                <span class="toggle-password" onclick="togglePassword()">👁️</span>
-            </div>
-            <button class="button-login" role="button" onclick="login()">Login</button>
-            <p>Don't have an account? <a  class="p" href="#" onclick="showRegister()">Register here</a></p>
-        </div>
+    <body>
+        <div class="fullContainer banner" id="homeSection">
+            <header>
+                <div class="container">
+                    <div class="logo">
+                        <img src="LogoSF.png" alt="NGO logo">
+                    </div>
 
-        <div id="register-form" class="form hidden">
-            <h2>Register</h2>
-            <input type="text" id="register-name" placeholder="Full Name" required>
-            <input type="tel" id="register-number" placeholder="Phone Number" required>
-            <button id="send-otp-button" class="send-otp-button" role="button" onclick="sendOTP()">Send OTP</button>
-            <p id="otp-message" class="hidden"><span>Please wait for the OTP...</span></p>
-            <div id="otp-section" class="hidden">
-                <input class="send-otp-button" type="text" id="register-otp" placeholder="Enter OTP" required>
-                <button class="send-otp-button" role="button" onclick="verifyOTP()">Verify OTP</button>
-                <p id="verifying-message" class="hidden">Verifying...🔍</p>
-            </div>
-            <input type="text" id="register-username" placeholder="Active Member's ID" required disabled>
-            <div class="password-container">
-                <input class="input-password" type="password" id="register-password" placeholder="Set Your Password" required disabled>
-                <span class="toggle-password" onclick="toggleRegisterPassword()">👁️</span>
-            </div>
-            <div class="password-container">
-                <input class="input-password" type="password" id="register-confirm-password" placeholder="Confirm Password" required disabled>
-                <span class="toggle-password" onclick="toggleRegisterConfirmPassword()">👁️</span>
-            </div>
-            <button class="button-login" role="button" onclick="register()" id="register-button" disabled>Register</button>
-            <p>Already have an account? <a  class="p" href="#" onclick="showLogin()">Login here</a></p> 
-        </div>
-    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#homeSection">Home</a>
+                            </li>
+                            <li>
+                                <a href="#aboutSection">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#programsSection">Programs</a>
+                            </li>
+                            <li>
+                                <a href="#educationSection">Education</a>
+                            </li>
+                            <li>
+                                <a href="#gallerySection">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="ourteam.html">Our Team</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- header end here -->
 
-<div id="Pop-up-Images">
-    <!-- Error Pop-up incorrect password -->
-    <div id="error-popup" class="hidden">
-        <img src="PleaseEnterYourPassword.png" alt="Error Notification" class="error-img">
-    </div>
-    <!-- Error Pop-up invalid phone number -->
-    <div id="phone-error-popup" class="hidden">
-        <img src="InvalidNumber.png" alt="Enter Phone Number" class="error-img">
-    </div>
-    <!-- Error Pop-up Fill all fields -->
-    <div id="blank-field-popup" class="hidden">
-        <img src="FillAllFields.png" alt="Field is Blank" class="error-img">
-    </div>
-    <!-- Error Pop-up Successfully sent OTP -->
-    <div id="otp-confirmation-popup" class="hidden">
-        <img src="SuccessfullySentOTP.png" alt="OTP Confirmation" class="error-img">
-    </div>
-    <!-- OTP Verified Pop-up -->
-    <div id="otp-verified-popup" class="hidden">
-        <img src="OTPverified.png" alt="OTP Verified" class="error-img">
-    </div>
-    <!-- Password Strength Pop-up -->
-    <div id="password-strength-popup" class="hidden">
-        <img src="PleasesetastrongPassword.png" alt="Password Strength" class="error-img">
-    </div>
-    <!-- Invalid OTP Pop-up -->
-    <div id="invalid-otp-popup" class="hidden">
-        <img src="InvalidOTP.png" alt="Invalid OTP" class="error-img">
-    </div>
-    <!-- Password Mismatch Pop-up -->
-    <div id="password-mismatch-popup" class="hidden">
-        <img src="PasswordNotMatch.png" alt="Passwords Do Not Match" class="error-img">
-    </div>
-    <!-- Username already exists Pop-up -->
-    <div id="username-exists-popup" class="hidden">
-        <img src="UsernameAlreadyExists.png" alt="Username Exists" class="error-img">
-    </div>
-    <!-- Registration Successful Pop-up -->
-    <div id="registration-success-popup" class="hidden">
-        <img src="RegistrationSuccessful.png" alt="Registration Successful" class="error-img">
-    </div>
-</div>
-    <script src="login.js"></script>
-</body>
+            <div class="container">
+                <h1>Together We Can <span>Save Lives</span></h1>
+                <p style="font-weight: 500;">
+                    SAFAR FOUNDATION IS ALAWAYS READY TO PROVIDE HELP AND SUPPORT TO ALL,
+                    REGARDLESS OF FACE ETHNICITY OR RELAGION.
+                </p>
+                <button>Start With A Little</button>
+            </div>
+        </div>
+        <!-- homeSection end here -->
+
+        <section class="fullContainer" id="aboutSection">
+        <div class="container">
+            <h2 class="sectionTitle">About Us</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid similique voluptas asperiores suscipit ipsum laborum cumque est quidem culpa sequi corporis illo, veritatis quo quis et consectetur omnis quod nobis.
+            </p>
+            
+            <div class="cards">
+                <div class="donationBox">
+                    <div class="title">Give Donation</div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <button>Donate Now</button>
+                </div>
+                <!-- Donation Box end -->
+
+
+                <div class="volunteerBox">
+                    <div class="title">Beacome a volunteer</div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <button>Become Now</button>
+                </div>
+                <!-- Donation Box end -->
+
+
+                <div class="scholarshipBox">
+                    <div class="title">Give Scholarship</div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <button>Give Immediately</button>
+                </div>
+                <!-- Donation Box end -->
+                </div>
+            </div>
+        </section>
+        <!-- aboutSection end here -->
+
+        <section class="programs" id="programsSection">
+            <div class="container">
+                <h2 class="sectionTitle">Programs</h2>
+
+                <div class="boxContainer">
+                    <div class="box">
+                        <div class="cardImage"></div>
+                        <div class="programTitle">Education to every child</div>
+                        <div class="donationCount">
+                            Donaiton Goal : <span>$9845</span>
+                        </div>
+                        <button>Donate Now</button>
+                    </div>
+                    <!-- box end -->
+
+                    <div class="box">
+                        <div class="cardImage"></div>
+                        <div class="programTitle">
+                            Make life easier for them
+                        </div>
+                        <div class="donationCount">
+                            Donaiton Goal : <span>$9845</span>
+                        </div>
+                        <button>Donate Now</button>
+                    </div>
+                    <!-- box end -->
+
+                    <div class="box">
+                        <div class="cardImage"></div>
+                        <div class="programTitle">
+                            Dedicating to helping kids
+                        </div>
+                        <div class="donationCount">
+                            Donaiton Goal : <span>$9845</span>
+                        </div>
+                        <button>Donate Now</button>
+                    </div>
+                    <!-- box end -->
+
+                    <div class="box">
+                        <div class="cardImage"></div>
+                        <div class="programTitle">
+                            Clean water for people
+                        </div>
+                        <div class="donationCount">
+                            Donaiton Goal : <span>$9845</span>
+                        </div>
+                        <button>Donate Now</button>
+                    </div>
+                    <!-- box end -->
+                </div>
+                <!-- boxContainer end -->
+            </div>
+        </section>
+        <!-- programsSection end here -->
+
+        <section class="education" id="educationSection">
+            <video autoplay muted loop class="videoPlayer">
+                <source src="childrens_j6qEnw8k.mp4" type="video/mp4">
+                your browser does not support HTML5 video
+            </video>
+
+            <div class="container">
+                <div class="sectionTitle">Education</div>
+
+                <div class="educationContainer">
+                    <h3>
+                        Education Is Essential For <br>
+                        <strong> BETTER FUTURE </strong>
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Facere nemo quam ea temporibus sapiente necessitatibus,
+                        cumque in atque quisquam. Illo saepe incidunt similique
+                        voluptatem eum aliquid, maxime adipisci. Exercitationem,
+                        sunt.
+                    </p>
+                    <button>EXPLORE NOW</button>
+                </div>
+            </div>
+        </section>
+        <!-- educationSection end here -->
+
+        <section class="gallery" id="gallerySection">
+            <div class="container">
+                <div class="sectionTitle">Gallery</div>
+
+                <div class="galleryContainer">
+                    <div class="item">
+                        <span class="title"> Image Title </span>
+                        <img src="1.jpg" alt="">
+                    </div>
+                    <!-- .item -->
+
+                    <div class="item">
+                        <span class="title"> Image Title </span>
+                        <img src="2.jpg" alt="">
+                    </div>
+                    <!-- .item -->
+
+                    <div class="item">
+                        <span class="title"> Image Title </span>
+                        <img src="3.jpg" alt="">
+                    </div>
+                    <!-- .item -->
+
+                    <div class="item">
+                        <span class="title"> Image Title </span>
+                        <img src="4.jpg" alt="">
+                    </div>
+                    <!-- .item -->
+                     
+                    <div class="item">
+                        <span class="title"> Image Title </span>
+                        <img src="5.jpg" alt="">
+                    </div>
+                    <!-- .item -->
+
+                    <div class="item">
+                        <span class="title"> Image Title </span>
+                        <img src="6.jpg" alt="">
+                    </div>
+                    <!-- .item -->
+                     
+                    <div class="item">
+                        <span class="title"> Image Title </span>
+                        <img src="7.jpg" alt="">
+                    </div>
+                    <!-- .item -->
+
+                    <div class="item">
+                        <span class="title"> Image Title </span>
+                        <img src="8.jpg" alt="">
+                    </div>
+                    <!-- .item -->
+                </div>
+            </div>
+        </section>
+        <!-- gallery section end here -->
+
+        <section class="join" id="joinSection">
+            <div class="container">
+                <div class="joinTitle">
+                    ADOPT A CHILD & <span>SAVE LIVES</span>
+                </div>
+                <P>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Voluptatum repudiandae et porro nam unde provident repellendus
+                    ut totam! Vero nemo voluptate ullam reprehenderit soluta
+                    providentnihil numquam exercitationem deleniti
+                    molestiae?
+                </P>
+                <button class="joinNow">JOIN US</button>
+                <button class="adoptBtn">ADOPT A CHILD</button>
+            </div>
+        </section>
+        <!-- join section end -->
+
+        <footer>
+            <div class="container">
+                <div class="newsLetterContainer">
+                    <img src="LogoSF.png" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Possimus placeat odio deleniti delectus voluptatum,
+                    </p>
+                    <input type="text" placeholder="Enter your email id">
+                </div>
+                <!-- .newsLetterContainer -->
+
+                <div class="linksContainer">
+                    <div class="title">Useful Links</div>
+                    <ul>
+                        <li>
+                            <a href="#homeSection">Home</a>
+                        </li>
+                        <li>
+                            <a href="#aboutSection">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#programsSection">Programs</a>
+                        </li>
+                        <li>
+                            <a href="#educationSection">Education</a>
+                        </li>
+                        <li>
+                            <a href="#gallerySection">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#joinSection">Join Us</a>
+                        </li>
+			<li>
+                            <a href="login.html" target="_blank">Log-In</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .linksContainer -->
+                 
+                <div class="connectContainer">
+                    <div class="title">Connect with us</div>
+                    <p>
+                        SAFAR FOUNDATION, Ghuni Majher Para, Newtown, Kolkata<br>
+                        700157, West Bengal
+                    </p>
+                    <p>safar@gmail.com</p>
+                    <p>(+91) 6289997667</p>
+                </div>
+                <!-- .connectContainer -->
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
 </html>
