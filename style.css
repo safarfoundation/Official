@@ -641,7 +641,19 @@ footer .newsLetterContainer input {
         grid-template-columns: repeat(2, 1fr);
     }
     .member-details-content {
-        width: 33%; /* Could be more or less, depending screen size */
+        width: 35%; /* Could be more or less, depending screen size */
+    }
+}
+
+@media screen and (max-width: 888px) {
+    .member-details-content {
+        width: 39%; /* Could be more or less, depending screen size */
+    }
+}
+
+@media screen and (max-width: 795px) {
+    .member-details-content {
+        width: 42%; /* Could be more or less, depending screen size */
     }
 }
 
@@ -717,9 +729,41 @@ footer .newsLetterContainer input {
     }
 }
 
+@media screen and (max-width: 726px) {
+    .member-details-content {
+        width: 47%; /* Could be more or less, depending screen size */
+    }
+}
+
 @media screen and (max-width: 600px) {
     .member-details-content {
-        width: 56%;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    .member-details-content {
+        width: 51%; /* Could be more or less, depending screen size */
+    }
+}
+@media screen and (max-width: 566px) {
+    .member-details-content {
+        width: 62%; /* Could be more or less, depending screen size */
+    }
+}
+@media screen and (max-width: 560px) {
+    .member-details-content {
+        width: 60%; /* Could be more or less, depending screen size */
+    }
+}
+@media screen and (max-width: 555px) {
+    .member-details-content {
+        width: 60%; /* Could be more or less, depending screen size */
+    }
+}
+@media screen and (max-width: 500px) {
+    .member-details-content {
+        width: 66%; /* Could be more or less, depending screen size */
     }
 }
 
@@ -759,6 +803,14 @@ footer .newsLetterContainer input {
         grid-template-columns: 1fr;
     }
 }
+
+
+@media screen and (max-width: 395px) {
+    .member-details-content {
+        width: 89%;
+    }
+}
+
 
 @media screen and (max-width: 320px) {
     .education .educationContainer h3 {
