@@ -594,6 +594,72 @@ footer .newsLetterContainer input {
 
 /* Footer End here */
 
+
+/* Donators Information Styling Start */
+
+.details-button {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+#gallerySection h1 {
+    text-align: center;
+}
+
+#gallerySection table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#gallerySection th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#gallerySection th {
+    background-color: #f4f4f4;
+    color: black;
+    text-align: left;
+}
+#gallerySection tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+#gallerySection tr:hover {
+    background-color: #d1e7fd;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.cllose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cllose:hover,
+.cllose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Donators Information Styling End */
+
+
 /* Responsive Code Start from Here */
 @media screen and (max-width: 1400px) {
     .member-details-content {
