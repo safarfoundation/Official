@@ -717,6 +717,12 @@ footer .newsLetterContainer input {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .member-details-content {
+        width: 56%;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .member-details-content {
         width: 78%; /* Could be more or less, depending screen size */
