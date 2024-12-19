@@ -37,8 +37,9 @@
             <div class="container">
                 <div class="sectionTitle">Donation History</div>
 
-                <h1>SAFAR FOUNDATION Donators</h1>
-                <table>
+                <h1>SAFAR FOUNDATION'S DONATORS</h1>
+                <input type="text" id="searchBar" onkeyup="searchDonators()" placeholder="Search for names or nicknames...">
+                <table id="donatorsTable">
                     <tr>
                         <th>Name</th>
                         <th>Nickname</th>
@@ -46,24 +47,36 @@
                         <th>Donation Details</th>
                     </tr>
                     <tr>
-                        <td>Samim Ali</td>
+                        <td>Samim Ali Laskar</td>
                         <td>Samim Bhai A.M</td>
-                        <td>Ghuni</td>
-                        <td><span class="details-button" onclick="requestPassword('donator1')">View Details</span></td>
+                        <td>Laskar Para</td>
+                        <td><span class="details-button" onclick="requestPassword('samim6783')">View Details</span></td>
                     </tr>
                     <tr>
-                        <td>Ishak Ali</td>
+                        <td>Ishak Ali Molla</td>
                         <td>Ishak Bhai A.M</td>
-                        <td>Ghuni</td>
-                        <td><span class="details-button" onclick="requestPassword('donator2')">View Details</span></td>
+                        <td>Mondal Para</td>
+                        <td><span class="details-button" onclick="requestPassword('ishak7667')">View Details</span></td>
+                    </tr>
+                    <tr>
+                        <td>Rohan Khan</td>
+                        <td>Rohan Bhai A.M</td>
+                        <td>Laskar Para</td>
+                        <td><span class="details-button" onclick="requestPassword('rohan9817')">View Details</span></td>
+                    </tr>
+                    <tr>
+                        <td>SK. Raj</td>
+                        <td>Raj</td>
+                        <td>Laskar Para</td>
+                        <td><span class="details-button" onclick="requestPassword('raj8486')">View Details</span></td>
                     </tr>
                     <!-- Add more donators as needed -->
                 </table>
-                
-                <div id="donator1" class="modal">
+                <!-- Donation Details Section -->
+                <div id="samim6783" class="modal">
                     <div class="modal-content">
-                        <span class="cllose" onclick="closeModal('donator1')">&times;</span>
-                    <h1>Donation Details for Samim Ali</h1>
+                        <span class="cllose" onclick="closeModal('samim6783')">&times;</span>
+                    <h1>Donation Details of Samim <span id="total-samim6783" class="total-section"></span></h1>
                         <table>
                             <tr>
                                 <th>Date</th>
@@ -72,22 +85,48 @@
                             </tr>
                             <tr>
                                 <td>2024/12/01</td>
-                                <td>$838</td>
+                                <td class="amount">$838</td>
                                 <td>Sakil Babu</td>
                             </tr>
                             <tr>
                                 <td>2024/11/01</td>
-                                <td>$293</td>
+                                <td class="amount">$293</td>
                                 <td>Sakil Babu</td>
+                            </tr>
+                            <!-- add details here -->
+                        </table>
+                    </div>
+                </div>
+
+                <div id="ishak7667" class="modal">
+                    <div class="modal-content">
+                        <span class="cllose" onclick="closeModal('ishak7667')">&times;</span>
+                    <h1>Donation Details of ishak</h1>
+                    <span id="total-ishak7667" class="total-section"></span>
+                        <table>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Collector Name</th>
+                            </tr>
+                            <tr>
+                                <td>2024/12/01</td>
+                                <td class="amount">$380</td>
+                                <td>Rasel Babu</td>
+                            </tr>
+                            <tr>
+                                <td>2024/11/01</td>
+                                <td class="amount">$933</td>
+                                <td>Rasel Babu</td>
                             </tr>
                         </table>
                     </div>
                 </div>
 
-                <div id="donator2" class="modal">
+                <div id="rohan9817" class="modal">
                     <div class="modal-content">
-                        <span class="cllose" onclick="closeModal('donator2')">&times;</span>
-                    <h1>Donation Details for Samim Ali</h1>
+                        <span class="cllose" onclick="closeModal('rohan9817')">&times;</span>
+                    <h1>Donation Details of Rohan <span id="total-rohan9817" class="total-section"></span></h1>
                         <table>
                             <tr>
                                 <th>Date</th>
@@ -96,17 +135,44 @@
                             </tr>
                             <tr>
                                 <td>2024/12/01</td>
-                                <td>$380</td>
+                                <td class="amount">$380</td>
                                 <td>Rasel Babu</td>
                             </tr>
                             <tr>
                                 <td>2024/11/01</td>
-                                <td>$933</td>
+                                <td class="amount">$933</td>
                                 <td>Rasel Babu</td>
                             </tr>
                         </table>
                     </div>
                 </div>
+
+                <div id="raj8486" class="modal">
+                    <div class="modal-content">
+                        <span class="cllose" onclick="closeModal('raj8486')">&times;</span>
+                    <h1>Donation Details of Raj <span id="total-raj8486" class="total-section"></span></h1>
+                        <table>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Collector Name</th>
+                            </tr>
+                            <tr>
+                                <td>2024/12/01</td>
+                                <td class="amount">$380</td>
+                                <td>Rasel Babu</td>
+                            </tr>
+                            <tr>
+                                <td>2024/11/01</td>
+                                <td class="amount">$933</td>
+                                <td>Rasel Babu</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- Add Details Here -->
+            </div>
+
         </section>
         <!-- gallery section end here -->
 
