@@ -39,7 +39,7 @@ body {
     background-color: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin: 20px 0 0 270px;
+    margin: 20px 0 0 23%;
     width: 50%;
     font-weight: 800;
     text-decoration: underline;
@@ -65,7 +65,7 @@ body {
 
 .links a {
     font-size: 40px;
-    margin: 50px;
+    margin: 40px;
 }
 
 .links a:nth-child(1) {
