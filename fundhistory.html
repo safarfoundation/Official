@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <style>
+        /* styles.css */
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.payment-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+    </style>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const donationMethod = document.getElementById('donation-method');
+    const paymentForm = document.getElementById('payment-form');
+
+    if (donationMethod && paymentForm) {
+        donationMethod.addEventListener('change', function(event) {
+            const method = event.target.value;
+            const cardDetails = document.getElementById('card-details');
+            const donationDetails = document.getElementById('donation-details');
+
+            if (method === 'debit-card' || method === 'credit-card') {
+                cardDetails.style.display = 'block';
+                donationDetails.style.display = 'none';
+            } else if (method === 'google-pay' || method === 'paytm' || method === 'phone-pe') {
+                cardDetails.style.display = 'none';
+                donationDetails.style.display = 'block';
+            } else {
+                cardDetails.style.display = 'none';
+                donationDetails.style.display = 'none';
+            }
+        });
+
+        paymentForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const method = donationMethod.value;
+            let paymentData = { method };
+
+            if (method === 'debit-card' || method === 'credit-card') {
+                const name = document.getElementById('name').value;
+                const cardNumber = document.getElementById('card-number').value;
+                const expirationDate = document.getElementById('expiration-date').value;
+                const cvv = document.getElementById('cvv').value;
+
+                paymentData = { ...paymentData, name, cardNumber, expirationDate, cvv };
+            } else if (method === 'google-pay' || method === 'paytm' || method === 'phone-pe') {
+                const donorName = document.getElementById('donor-name').value;
+                const phoneNumber = document.getElementById('phone-number').value;
+                const email = document.getElementById('email').value;
+                const donationAmount = document.getElementById('donation-amount').value;
+                const message = document.getElementById('message').value;
+
+                paymentData = { ...paymentData, donorName, phoneNumber, email, donationAmount, message };
+
+                const upiURL = `upi://pay?pa=ichak533-1@okaxis&pn=${encodeURIComponent(donorName)}&tn=${encodeURIComponent(message)}&am=${donationAmount}&cu=INR`;
+
+                window.location.href = `intent://${upiURL}#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end`;
+            }
+
+            console.log(paymentData);
+            alert('Payment Submitted!');
+        });
+    } else {
+        console.error('Required elements are not found in the DOM.');
+    }
+});
+
+    </script>
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Choose Donation Method</h1>
+        <form id="payment-form">
+            <label for="donation-method">Donation Method</label>
+            <select id="donation-method" name="donation-method" required>
+                <option value="">Select Method</option>
+                <option value="google-pay">Google Pay</option>
+                <option value="paytm">Paytm</option>
+                <option value="phone-pe">PhonePe</option>
+                <option value="debit-card">Debit Card</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="pay-by-scan">Pay by Scan</option>
+            </select>
+
+            <div id="card-details" style="display: none;">
+                <label for="name">Name on Card</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="expiration-date">Expiration Date</label>
+                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+
+            <div id="donation-details" style="display: none;">
+                <label for="donor-name">Name</label>
+                <input type="text" id="donor-name" name="donor-name" required>
+
+                <label for="phone-number">Phone Number</label>
+                <input type="text" id="phone-number" name="phone-number" required>
+
+                <label for="email">Gmail</label>
+                <input type="email" id="email" name="email">
+
+                <label for="donation-amount">Donation Amount</label>
+                <input type="number" id="donation-amount" name="donation-amount" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+
+            <button type="submit">Submit Payment</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
