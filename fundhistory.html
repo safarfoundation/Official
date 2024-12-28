@@ -58,6 +58,7 @@ button:hover {
 
     </style>
     <script>
+
 document.addEventListener('DOMContentLoaded', function() {
     const donationMethod = document.getElementById('donation-method');
     const paymentForm = document.getElementById('payment-form');
@@ -71,12 +72,18 @@ document.addEventListener('DOMContentLoaded', function() {
             if (method === 'debit-card' || method === 'credit-card') {
                 cardDetails.style.display = 'block';
                 donationDetails.style.display = 'none';
+                setCardFieldsRequired(true);
+                setDonationFieldsRequired(false);
             } else if (method === 'google-pay' || method === 'paytm' || method === 'phone-pe') {
                 cardDetails.style.display = 'none';
                 donationDetails.style.display = 'block';
+                setCardFieldsRequired(false);
+                setDonationFieldsRequired(true);
             } else {
                 cardDetails.style.display = 'none';
                 donationDetails.style.display = 'none';
+                setCardFieldsRequired(false);
+                setDonationFieldsRequired(false);
             }
         });
 
@@ -102,16 +109,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 paymentData = { ...paymentData, donorName, phoneNumber, email, donationAmount, message };
 
-                const upiURL = `upi://pay?pa=ichak533-1@okaxis&pn=${encodeURIComponent(donorName)}&tn=${encodeURIComponent(message)}&am=${donationAmount}&cu=INR`;
+                const upiURL = `upi://pay?pa=ichak533-1@okaxis&pn=${encodeURIComponent(donorName)}&am=${encodeURIComponent(donationAmount)}&tn=${encodeURIComponent(message)}&cu=INR`;
 
-                window.location.href = `intent://${upiURL}#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end`;
+                window.location.href = `intent:${upiURL}#Intent;package=com.google.android.apps.nbu.paisa.user;end`;
             }
 
             console.log(paymentData);
-            alert('Payment Submitted!');
         });
     } else {
         console.error('Required elements are not found in the DOM.');
+    }
+
+    function setCardFieldsRequired(required) {
+        const cardFields = ['name', 'card-number', 'expiration-date', 'cvv'];
+        cardFields.forEach(field => {
+            document.getElementById(field).required = required;
+        });
+    }
+
+    function setDonationFieldsRequired(required) {
+        const donationFields = ['donor-name', 'phone-number', 'email', 'donation-amount'];
+        donationFields.forEach(field => {
+            document.getElementById(field).required = required;
+        });
     }
 });
 
