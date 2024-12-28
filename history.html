@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Donations History</title>
+    <link rel="stylesheet" href="history.css">
+</head>
+<body>
+    <div class="history-container">
+        <h1>Online Donations History</h1>
+        <input type="password" id="password" placeholder="Enter Password">
+        <button id="login-button">Login</button>
+        <div id="donation-history" style="display: none;">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Donor Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Donation Amount</th>
+                            <th>Message</th>
+                            <th>Method</th>
+                            <th>Date & Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-table-body">
+                        <!-- Donation history will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="history.js"></script>
+</body>
+</html>
