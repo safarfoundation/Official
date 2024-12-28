@@ -109,9 +109,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 paymentData = { ...paymentData, donorName, phoneNumber, email, donationAmount, message };
 
-                const upiURL = `upi://pay?pa=ichak533-1@okaxis&pn=${encodeURIComponent(donorName)}&am=${encodeURIComponent(donationAmount)}&tn=${encodeURIComponent(message)}&cu=INR`;
+                let upiURL = `upi://pay?pa=ichak533-1@okaxis&pn=${encodeURIComponent(donorName)}&am=${encodeURIComponent(donationAmount)}&tn=${encodeURIComponent(message)}&cu=INR`;
 
-                window.location.href = `intent:${upiURL}#Intent;package=com.google.android.apps.nbu.paisa.user;end`;
+                if (method === 'google-pay') {
+                    upiURL = `intent:${upiURL}#Intent;package=com.google.android.apps.nbu.paisa.user;end`;
+                } else if (method === 'phone-pe') {
+                    upiURL = `intent:${upiURL}#Intent;package=com.phonepe.app;end`;
+                } else if (method === 'paytm') {
+                    upiURL = `intent:${upiURL}#Intent;package=net.one97.paytm;end`;
+                }
+
+                // Using anchor tag to redirect for better compatibility
+                const anchor = document.createElement('a');
+                anchor.href = upiURL;
+                document.body.appendChild(anchor);
+                anchor.click();
+                document.body.removeChild(anchor);
             }
 
             console.log(paymentData);
