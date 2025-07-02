@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to SAFARFOUNDATION Donor Page, Where you can explore our's all donators Data.">
+    <meta name="keywords" content="SAFARFOUNDATION, donators, donors, charity supporters, donor details, contributors, community help, donation information">
+    <title>SAFARFOUNDATION | Donators Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div class="fullContainer Banner" id="homeSection">
+            <header>
+                <div class="container">
+                    <div class="logo">
+                        <a href="#gallerySection"><img src="LogoSF.png" alt="SAFARFOUNDATION's logo"></a>
+                    </div>
+
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="ourteam.html">Our Team</a>
+                            </li>
+                            <li>
+                                <a href="ourteam.html">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="#joinSection">Join Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+                
+                <section class="gallery" id="gallerySection">
+            <div class="container">
+                <div class="sectionTitle">Donation History</div>
+
+                <h1>DONATORS FOR GAZA</h1>
+                <input type="text" id="searchBar" onkeyup="searchDonators()" placeholder="Search for names or nicknames...">
+                <table id="donatorsTable">
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Nickname</th>
+                        <th>Address</th>
+                        <th>Donation Details</th>
+                    </tr>
+                    <tr><td>01</td>
+                        <td>Samim Ali Laskar</td>
+                        <td>Samim Bhai A.M</td>
+                        <td>Laskar Para</td>
+                        <td><span class="details-button" onclick="requestPassword('samim6783')">View Details</span></td>
+                    </tr>
+                                        
+
+                    <!-- Add more donators as needed -->
+                </table>
+                <!-- Donation Details Section -->
+                <div id="samim6783" class="modal 01">
+                    <div class="modal-content">
+                        <span class="cllose" onclick="closeModal('samim6783')">&times;</span>
+                    <h1>Donation Details of Samim <span id="total-samim6783" class="total-section"></span></h1>
+                        <table>
+                            <tr>
+                                <th>No.</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Collector Name</th>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>2024/12/01</td>
+                                <td class="amount">₹1</td>
+                                <td>Rasel Babu</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>2025/01/01</td>
+                                <td class="amount">₹1</td>
+                                <td>Rasel Babu</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+
+                <!-- Add Details Here -->
+            </div>
+
+        </section>
+        <!-- gallery section end here -->
+
+        <section class="join" id="joinSection">
+            <div class="container">
+                <div class="joinTitle">
+                    ADOPT A CHILD & <span>SAVE LIVES</span>
+                </div>
+                <P>
+                    "একটি শিশুর জীবনে আপনার ভালোবাসা আর সহানুভূতির আলো ছড়িয়ে দিন। SAFAR FOUNDATION এর মাধ্যমে একটি শিশু দত্তক নিয়ে তাদের ভবিষ্যৎ আলোকিত করুন। আপনার সহায়তায়, তারা নতুন সুযোগ ও সুরক্ষার পরিবেশে বেড়ে উঠতে পারবে। আসুন, একসাথে আমরা একটি সুন্দর ভবিষ্যতের পথ তৈরি করি।"
+                </P>
+                <a href="#joinSection"><button class="joinNow">JOIN US</button></a>
+                <button class="adoptBtn">ADOPT A CHILD</button>
+            </div>
+        </section>
+        <!-- join section end -->
+
+        <footer>
+            <div class="container">
+                <div class="newsLetterContainer">
+                    <img src="LogoSF.png" alt="SAFARFOUNDATION's logo">
+                    <p>
+                        "মানুষের জীবনে প্রতিটি মুহূর্তই মূল্যবান। SAFAR FOUNDATION এ, আমরা অসহায় ও গৃহহীনদের সহায়তার জন্য প্রতিশ্রুতিবদ্ধ। আপনার অনুদান আমাদেরকে অসহায়দের জীবনে আলো আনতে সাহায্য করে। স্বপ্নের পথে একটি সুন্দর যাত্রা শুরু হোক আপনার সহায়তায়। যদি আপনার কোনো মতামত বা প্রশ্ন থাকে, নিচের মেসেজ বক্সে লিখুন, আপনার মতামত আমাদের জন্য অমূল্য।"
+                    </p>
+                    <div class="message-box">
+                        <h3>Send Us a Message</h3>
+                        <form id="messageForm" action="https://formspree.io/f/xvgggelq" method="POST">
+                            <input type="hidden" name="-subject" value="New message from SAFAR FOUNDATION website">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="message">Message:</label>
+                            <textarea name="message" id="message" rows="4" required></textarea>
+                            <button type="submit" class="send" role="button">Send</button>
+                        </form>
+                        <div id="formMessage"></div>
+                    </div>
+                </div>
+
+                <div id="MessageSuccess" class="SendSuccess">
+                    <div class="send-content">
+                        <span class="close-button" onclick="closeMessageSuccess()">&times;</span>
+                        <p>Send Successfull!</p>
+                    </div>
+                </div>
+                <!-- .newsLetterContainer -->
+
+                <div class="linksContainer">
+                    <div class="title">Useful Links</div>
+                    <ul>
+                        <li>
+                            <a href="#homeSection">Home</a>
+                        </li>
+                        <li>
+                            <a href="#aboutSection">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#programsSection">Programs</a>
+                        </li>
+                        <li>
+                            <a href="#educationSection">Education</a>
+                        </li>
+                        <li>
+                            <a href="#gallerySection">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#joinSection">Join Us</a>
+                        </li>
+			<li>
+                            <a href="login.html" target="_blank">Log-In</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .linksContainer -->
+                 
+                <div class="connectContainer">
+                    <div class="title">Connect with us</div>
+                    <p>
+                        SAFAR FOUNDATION, Ghuni Majher Para, Newtown, Kolkata<br>
+                        700157, West Bengal
+                    </p>
+                    <p>safar@gmail.com</p>
+                    <p>(+91) 6289997667</p>
+                    <br>
+                <div class="links">
+                    <a href="http://www.youtube.com/@SAFAR_FOUNDATION" target="_blank"><i class="bi bi-youtube"></i></a> |
+                    <a href="https://www.facebook.com/profile.php?id=61553830112690" target="_blank"><i class="bi bi-facebook"></i></a> |
+                    <a href="https://www.instagram.com/SAFARFoundation" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+                </div>
+                <!-- .connectContainer -->
+            </div>
+        </footer>
+        <script src="script.js"></script>
+        <script src="donation.js"></script>
+    </body>
+</html>
