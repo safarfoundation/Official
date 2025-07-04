@@ -261,6 +261,10 @@ const donatorPasswords = {
     "Akib6091": "8240766091", //239
 
 
+    // DONORS OF GAZA
+    "abdul58334": "9836258334", //01
+    "abbas8670": "7003428670", //02
+
     // Add more donators and their password
 };
 
