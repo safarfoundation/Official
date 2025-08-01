@@ -1,6 +1,10 @@
 const donors = [
-  { name: "Abdul Salam Gazi", phone: "9836258334", amount: 1500 },
-  { name: "Abbas Ali", phone: "7003428670", amount: 500 },
+  { name: "SALAM KAKU", phone: "XXXXXXXXXX", amount: 1500 },
+  { name: "TAHIR BHAI", phone: "XXXXXXXXXX", amount:1100 },
+  { name: "ABUL HASAN", phone: "XXXXXXXXXX", amount: 5000 },
+  { name: "RUPAN", phone: "XXXXXXXXXX", amount: 1000 },
+  { name: "KHUSHID", phone: "XXXXXXXXXX", amount: 1000 },
+  { name: "KHUSHID", phone: "XXXXXXXXXX", amount: 1000 },
   
 ];
 
