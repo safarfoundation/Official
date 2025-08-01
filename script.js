@@ -262,8 +262,15 @@ const donatorPasswords = {
 
 
     // DONORS OF GAZA
-    "abdul58334": "9836258334", //01
-    "abbas8670": "7003428670", //02
+    "sorifmandol123": "123", //01
+    "farukali123": "123", //02
+    "irfanali123": "123", //03
+    "lalucha123": "123", //04
+    "samiullaskar123": "123", //05
+    "saddamali123": "123", //06
+    "fojlulhaque123": "123", //07
+    "asanurhaque123": "123", //08
+    "sadikullamondal123": "123", //09
 
     // Add more donators and their password
 };
