@@ -1,3 +1,4 @@
+//All Gold Memebers Down Below
 const donors = [
   { name: "SALAM KAKU", phone: "XXXXXXXXXX", amount: 1500 },
   { name: "TAHIR BHAI", phone: "XXXXXXXXXX", amount:1100 },
@@ -11,11 +12,19 @@ const donors = [
 let index = 0;
 const batchSize = 3;
 const popupContainer = document.getElementById("popupContainer");
-const totalBalance = document.getElementById("totalBalance");
 
 function calculateBalance() {
-  const sum = donors.reduce((acc, donor) => acc + donor.amount, 0);
-  totalBalance.textContent = sum;
+  const amountElements = document.querySelectorAll(".amount");
+  let sum = 0;
+  amountElements.forEach(el => {
+    const text = el.textContent.replace(/[^\d]/g, "");
+    sum += parseInt(text) || 0;
+  });
+
+  const totalBalance = document.getElementById("totalBalance");
+  if (totalBalance) {
+    totalBalance.textContent = sum;
+  }
 }
 
 function showBalance() {
