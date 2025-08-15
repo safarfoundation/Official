@@ -64,3 +64,68 @@ body {
   transform: scale(1.05) rotate(-1deg);
 }
 
+/* Masjiid Details */
+.masjid-list {
+  list-style: none;
+  padding: 0;
+  counter-reset: masjid-counter;
+}
+
+.masjid-list li {
+  counter-increment: masjid-counter;
+  position: relative;
+  padding-left: 30px; /* space for number */
+}
+
+.masjid-list li::before {
+  content: counter(masjid-counter) ". ";
+  position: absolute;
+  left: 10px;
+  font-weight: bold;
+  color: #00796b;
+}
+
+.masjid-list {
+  list-style: none;
+  padding: 0;
+}
+
+.masjid-list li.active:hover {
+  background-color: #b2ebf2; /* Slightly deeper teal */
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.total-amount {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-left: 300px;
+    color: #00796b;
+    
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.masjid-list li {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #e0f7fa;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.masjid-details {
+  display: none;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #00796b;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.masjid-amount {
+  color: red;
+  font-weight: 900;
+}
