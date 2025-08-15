@@ -101,7 +101,6 @@ body {
     font-size: 1.1em;
     font-weight: bold;
     margin-bottom: 15px;
-    padding-left: 300px;
     color: #00796b;
     
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -129,3 +128,4 @@ body {
   color: red;
   font-weight: 900;
 }
+
