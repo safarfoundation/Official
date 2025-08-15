@@ -1,11 +1,15 @@
 //All Gold Memebers Down Below
 const donors = [
-  { name: "SALAM KAKU", phone: "XXXXXXXXXX", amount: 1500 },
-  { name: "TAHIR BHAI", phone: "XXXXXXXXXX", amount:1100 },
+  { name: "DR. ANOWER", phone: "XXXXXXXXXX", amount: 14000 },
+  { name: "NOTON DA", phone: "XXXXXXXXXX", amount: 5000 },
   { name: "ABUL HASAN", phone: "XXXXXXXXXX", amount: 5000 },
-  { name: "RUPAN", phone: "XXXXXXXXXX", amount: 1000 },
-  { name: "KHUSHID", phone: "XXXXXXXXXX", amount: 1000 },
-  { name: "KHUSHID", phone: "XXXXXXXXXX", amount: 1000 },
+  { name: "MUZAMMIL HAIDER", phone: "XXXXXXXXXX", amount: 2000 },
+  { name: "FARUK HASAN", phone: "XXXXXXXXXX", amount: 2000 },
+  { name: "MOHAMMAD FAIZUL", phone: "XXXXXXXXXX", amount: 2000 },
+  { name: "SABNAM PARVIN", phone: "XXXXXXXXXX", amount: 2000 },
+  { name: "MD MOKBUL AHMED", phone: "XXXXXXXXXX", amount: 1500 },
+  { name: "SALAM KAKU", phone: "XXXXXXXXXX", amount: 1500 }, 
+  
   
 ];
 
@@ -55,3 +59,36 @@ function showBatch() {
 
 // Start showing donors
 setInterval(showBatch, 2000);
+
+// Masjid collection toggle
+function toggleDetails(id) {
+  const detail = document.getElementById(id);
+  const parentLi = detail.closest('li');
+
+  const isVisible = detail.style.display === 'block';
+  detail.style.display = isVisible ? 'none' : 'block';
+
+  if (isVisible) {
+    parentLi.classList.remove('active');
+  } else {
+    parentLi.classList.add('active');
+  }
+}
+
+function calculateMasjidCollection() {
+  const masjidAmounts = document.querySelectorAll('.masjid-amount');
+  let total = 0;
+
+  masjidAmounts.forEach(span => {
+    const value = parseInt(span.textContent.replace(/[^\d]/g, '')) || 0;
+    total += value;
+  });
+
+  const totalDisplay = document.querySelector('.total-amount');
+  if (totalDisplay) {
+    totalDisplay.textContent = `Total Collection: ₹${total}`;
+  }
+}
+
+// Run this after page loads
+window.addEventListener('DOMContentLoaded', calculateMasjidCollection);
