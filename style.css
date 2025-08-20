@@ -73,6 +73,7 @@ header {
     position: fixed;
     z-index: 2;
     top: 0;
+    left: 0;
 }
 
 header .container {
@@ -926,6 +927,13 @@ footer .newsLetterContainer input {
 }
 
 @media screen and (max-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
     .member-details-content {
         width: 44%; /* Could be more or less, depending screen size */
     }
@@ -1105,4 +1113,5 @@ footer .newsLetterContainer input {
 }
 
 /* Responsive Code End Here */
+
 
