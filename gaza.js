@@ -7,6 +7,7 @@ const donors = [
   { name: "FARUK HASAN", phone: "XXXXXXXXXX", amount: 2000 },
   { name: "MOHAMMAD FAIZUL", phone: "XXXXXXXXXX", amount: 2000 },
   { name: "SABNAM PARVIN", phone: "XXXXXXXXXX", amount: 2000 },
+  { name: "MUE MANISHA SAPUI", phone: "XXXXXXXXXX", amount: 2000 },
   { name: "MD MOKBUL AHMED", phone: "XXXXXXXXXX", amount: 1500 },
   { name: "SALAM KAKU", phone: "XXXXXXXXXX", amount: 1500 }, 
   
@@ -92,3 +93,4 @@ function calculateMasjidCollection() {
 
 // Run this after page loads
 window.addEventListener('DOMContentLoaded', calculateMasjidCollection);
+
