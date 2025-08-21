@@ -41,7 +41,7 @@ p {
     text-align: center;
     font-size: 2rem;
     font-weight: 200;
-    margin: 0 auto 50px;
+    margin: 0 auto 10px;
     position: relative;
     padding: 10px 0;
     text-transform: uppercase;
@@ -785,6 +785,43 @@ footer .newsLetterContainer input {
     color: blue;
     text-decoration: underline;
 }
+/* Masjid More Info Button Start */
+.details-buttonmasjid {
+  --b: 2px;   /* border thickness */
+  --s: .3em;  /* size of the corner */
+  --color: #373B44;
+
+  padding: calc(.3em + var(--s)) calc(.7em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .4em;
+  font-size: 13px;
+  border: 0;
+  border-radius: 6px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-decoration: none;
+}
+
+.details-buttonmasjid:hover,
+.details-button:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .03em;
+}
+
+.details-buttonmasjid:active {
+  background: var(--color);
+  color: #fff;
+}
+/* Masjid More Info Button End */
+
 #gallerySection h1 {
     text-align: center;
 }
@@ -827,6 +864,28 @@ footer .newsLetterContainer input {
     border: 1px solid #888;
     width: 80%;
 }
+
+.modal-content h2 {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.modal-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    min-width: 250px;
+    max-width: 600px;
+    background: #fff;
+    padding: 2em 1em;
+    border-radius: 12px;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.15);
+}
+
 .cllose {
     color: darkgray;
     float: right;
@@ -1011,6 +1070,16 @@ footer .newsLetterContainer input {
     }
 }
 
+@media (max-width: 700px) {
+    .modal-content {
+        width: 90%;
+        padding: 1em 0.5em;
+    }
+    .modal-content h2 {
+        font-size: 1em;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .member-details-content {
         width: 60%;
@@ -1113,5 +1182,3 @@ footer .newsLetterContainer input {
 }
 
 /* Responsive Code End Here */
-
-
