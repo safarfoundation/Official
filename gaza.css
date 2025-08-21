@@ -78,7 +78,9 @@ body {
 }
 
 .masjid-list li::before {
+  content: counter(masjid-counter) ". ";
   position: absolute;
+  left: 10px;
   font-weight: bold;
   color: #00796b;
 }
@@ -126,6 +128,7 @@ body {
   color: red;
   font-weight: 900;
 }
+
 
 
 
