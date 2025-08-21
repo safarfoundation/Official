@@ -1,3 +1,12 @@
+//Masjid Gallery
+function openMasjidGallery(id) {
+    document.getElementById(id).style.display = 'block';
+}
+function closeMasjidGallery(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+
 //All Gold Memebers Down Below
 const donors = [
   { name: "DR. ANOWER", phone: "XXXXXXXXXX", amount: 14000 },
@@ -93,4 +102,3 @@ function calculateMasjidCollection() {
 
 // Run this after page loads
 window.addEventListener('DOMContentLoaded', calculateMasjidCollection);
-
