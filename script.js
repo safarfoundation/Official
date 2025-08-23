@@ -678,6 +678,7 @@ const donatorPasswords = {
     "golbanubibi123": "golb123", //414
     "sahidali123": "sahi123", //415
     "mdhossain123": "mdho123", //416
+    "najirakhatun123": "naji123", //417
 
     // Add more donators and their password
 };
@@ -743,3 +744,4 @@ function calculateTotal(donatorId) {
 // }
 
 // Donators Information Styling End
+
